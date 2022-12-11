@@ -1,48 +1,48 @@
-package com.restaurant.com.restaurant.zomato;
+package com.example.zomato.project.blueprint;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Zomatotable")
 public class Zomato {
-	private String restaurantname;
-	private int restaurantId;
-	private String deliverymode;
-	private int averagePrice;
-	private int rating;
-	private String location;
+@Column	
+private String  restaurantName;
+@Column
+@Id
+@GeneratedValue(strategy=GenerationType.IDENTITY)
+private int  restaurantId;
+@Column
+private int  rating;
+@Column
+private int averageCost;
+public int getAverageCost() {
+	return averageCost;
+}
+public void setAverageCost(int averageCost) {
+	this.averageCost = averageCost;
+}
+public String getRestaurantName() {
+	return restaurantName;
+}
+public void setRestaurantName(String restaurantName) {
+	this.restaurantName = restaurantName;
+}
+public int getRestaurantId() {
+	return restaurantId;
+}
+public void setRestaurantId(int restaurantId) {
+	this.restaurantId = restaurantId;
+}
+public int getRating() {
+	return rating;
+}
+public void setRating(int rating) {
+	this.rating = rating;
+}
 
-	public String getRestaurantname() {
-		return restaurantname;
-	}
-	public void setRestaurantname(String restaurantname) {
-		this.restaurantname = restaurantname;
-	}
-	public int getRestaurantId() {
-		return restaurantId;
-	}
-	public void setRestaurantId(int restaurantId) {
-		this.restaurantId = restaurantId;
-	}
-	public String getDeliverymode() {
-		return deliverymode;
-	}
-	public void setDeliverymode(String deliverymode) {
-		this.deliverymode = deliverymode;
-	}
-	public int getAveragePrice() {
-		return averagePrice;
-	}
-	public void setAveragePrice(int averagePrice) {
-		this.averagePrice = averagePrice;
-	}
-	public int getRating() {
-		return rating;
-	}
-	public void setRating(int rating) {
-		this.rating = rating;
-	}
-	public String getLocation() {
-		return location;
-	}
-	public void setLocation(String location) {
-		this.location = location;
-	}
-	
 }
